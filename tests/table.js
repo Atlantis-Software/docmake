@@ -8,13 +8,13 @@ describe('Table', function () {
   describe('buildColumnWidths', function () {
     it('should set calculate column widths', function (done) {
       var template = `
-      {{#table border=0 widths=[10, "20","auto", "*", "10%"]  width=300}}
-        {{#row border=0}}
-          {{#column border=0 fillColor="#000000"}}{{/column}}
-          {{#column border=0 fillColor="#000001"}}{{/column}}
-          {{#column border=0 fillColor="#000002"}}{{svg "<svg xmlns=\\"http://www.w3.org/2000/svg\\" version=\\"1.1\\" width=\\"50\\" height=\\"50\\"></svg>"}}{{/column}}
-          {{#column border=0 fillColor="#000003"}}{{/column}}
-          {{#column border=0 fillColor="#000004"}}{{/column}}
+      {{#table margin=0 border=0 widths=[10, "20","auto", "*", "10%"]  width=300}}
+        {{#row margin=0 border=0}}
+          {{#column margin=0 border=0 fillColor="#000000"}}{{/column}}
+          {{#column margin=0 border=0 fillColor="#000001"}}{{/column}}
+          {{#column margin=0 border=0 fillColor="#000002"}}{{svg "<svg xmlns=\\"http://www.w3.org/2000/svg\\" version=\\"1.1\\" width=\\"50\\" height=\\"50\\"></svg>"}}{{/column}}
+          {{#column margin=0 border=0 fillColor="#000003"}}{{/column}}
+          {{#column margin=0 border=0 fillColor="#000004"}}{{/column}}
         {{/row}}
       {{/table}}`;
       var doc = new Docmake();

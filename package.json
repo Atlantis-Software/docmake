@@ -14,7 +14,7 @@
     "document"
   ],
   "scripts": {
-    "test": "nyc mocha --timeout=10000 --exit",
+    "test": "nyc mocha",
     "coverage": "nyc report --reporter=text-lcov | coveralls",
     "lint": "eslint ./"
   },

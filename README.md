@@ -11,14 +11,14 @@ Installation uses the [npm](http://npmjs.org/) package manager.  Just type the f
 
 ```javascript
 var Docmake = require('docmake');
-var  fs = require('fs');
+var fs = require('fs');
 
 var doc = new Docmake();
 doc.compile('{{hello}}', { hello: 'hello world!' }, function(err) {
-	if (err) {
-	  return console.log(err);
-	}
-	doc.getPdf().pipe(fs.createWriteStream('document.pdf')); 
+  if (err) {
+    return console.log(err);
+  }
+  doc.getPdf().pipe(fs.createWriteStream('document.pdf')); 
 });
 ```
 
@@ -107,6 +107,19 @@ available attributes for svg:
 * height: (number or string containing a number and ends with `%`) height of the svg
 * alignment: (string) (‘left’ or ‘center’ or ‘right’) the alignment of the svg
 
+### qr
+
+Qr tag starts with `{{qr`, a string value, and ends with `}}`.
+
+```javascript
+{{qr "this is a qrcode"}}
+```
+
+available attributes for qr:
+* width: (number or string containing a number and ends with `%`) width of the qrcode
+* height: (number or string containing a number and ends with `%`) height of the qrcode
+* alignment: (string) (‘left’ or ‘center’ or ‘right’) the alignment of the qrcode
+
 ### columns
 
 by default, elements are placed one below other. using columns, elements are placed horizontally.
@@ -186,6 +199,31 @@ available attributes for table, row, header and columns:
 * margin: ([left, top, right, bottom], [horizontal, vertical], number equalLeftTopRightBottom) space arround element
 * border: ([left, top, right, bottom], [horizontal, vertical], number equalLeftTopRightBottom) size of the border
 
+### class
+
+Class tag define a class that can be applyed to any element.
+Class tag starts with `{{class`, a class name string, some attributes, and ends with `}}`.
+
+```javascript
+{{class "red" color="#FF0000"}}
+{{text "text displayed in red" class=["red"]}}
+```
+
+### font
+
+Font tag add .ttf files as font
+Font tag starts with `{{font`, a font name string, some attributes, and ends with `}}`.
+
+```javascript
+{{font myFont normal="/home/user/myfont.ttf"}}
+{{text "text displayed in red" class=["red"]}}
+```
+
+available attributes for font:
+* normal: (string) .ttf filepath for normal text
+* bold: (string) .ttf filepath for bold text
+* italics: (string) .ttf filepath for italics text
+* bolditalics: (string) .ttf filepath for bold and italics text
 
 ### page header and page footer
 
@@ -202,6 +240,9 @@ text `{{pageCount}}` in page footer is replaced by the count of pages.
   {{text "{{currentPage}} / {{pageCount}}" alignment="right"}}
 {{/pageFooter}}
 ```
+### page break
+
+`{{pageBreak}}` tag move to the next page.
 
 ### reset page count
 

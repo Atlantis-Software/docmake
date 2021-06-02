@@ -186,6 +186,7 @@ available attributes for table:
   * "*": star-sized columns fill the remaining space. if there's more than one star-column, available width is divided equally
 
 available attributes for table, row, header and columns:
+* colspan: (number) specifies the number of columns the cell should span
 * font: (string) name of the font
 * fontSize: (number) size of the font in pt
 * lineHeight: (number) the line height (default: 1)

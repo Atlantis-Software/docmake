@@ -81,6 +81,15 @@ available attributes for text:
 * decoration: (string) the text decoration to apply (‘none’ or ‘underline’ or ‘strike’)
 * alignment: (string) (‘left’ or ‘center’ or ‘right’) the alignment of the text
 
+### comment
+
+comments can be used to explain template code, and to make it more readable.
+Any text between // and the end of the line will be ignored by template (will not be executed).
+
+```javascript
+// some comment here
+```
+
 ### image
 
 Image tag starts with `{{image`, an image jpg or png (filepath or buffer or base64 string), and ends with `}}`.
@@ -153,6 +162,22 @@ available attributes for columns:
 * fillColor: (string) the background color of the columns
 * margin: ([left, top, right, bottom], [horizontal, vertical], number equalLeftTopRightBottom) space arround columns element
 * border: ([left, top, right, bottom], [horizontal, vertical], number equalLeftTopRightBottom) size of the border
+
+### stack
+
+in columns, elements are placed horizontally, using stack, elements are placed vertically.
+the tag `{{#stack}}` require a closing tag `{{/stack}}`.
+
+```javascript
+{{#stack}}
+  {{text "top"}}
+  {{text "middle"}}
+  {{text "bottom"}}
+{{/stack}}
+```
+
+available attributes for stack:
+* width: (number or string containing a number and ends with `%`) total width of the stack
 
 ### table
 

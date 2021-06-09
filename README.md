@@ -225,6 +225,15 @@ available attributes for table, row, header and columns:
 * margin: ([left, top, right, bottom], [horizontal, vertical], number equalLeftTopRightBottom) space arround element
 * border: ([left, top, right, bottom], [horizontal, vertical], number equalLeftTopRightBottom) size of the border
 
+### hspace and vspace
+hspace tag add an horizontal space wheras vspace add a vertical one.
+they only take one integer size parameter.
+
+```javascript
+{{hspace 100}}
+{{vspace 50}}
+```
+
 ### class
 
 Class tag define a class that can be applyed to any element.

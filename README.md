@@ -116,6 +116,19 @@ available attributes for svg:
 * height: (number or string containing a number and ends with `%`) height of the svg
 * alignment: (string) (‘left’ or ‘center’ or ‘right’) the alignment of the svg
 
+### barcode
+
+Barcode tag starts with `{{barcode`, a string value, and ends with `}}`.
+
+```javascript
+{{barcode "this is a barcode"}}
+```
+
+available attributes for qr:
+* width: (number or string containing a number and ends with `%`) width of the barcode
+* height: (number or string containing a number and ends with `%`) height of the barcode
+* alignment: (string) (‘left’ or ‘center’ or ‘right’) the alignment of the barcode
+
 ### qr
 
 Qr tag starts with `{{qr`, a string value, and ends with `}}`.

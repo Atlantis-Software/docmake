@@ -80,6 +80,11 @@ available attributes for text:
 * color: (string) the color of the text (color name e.g., ‘blue’ or hexadecimal color e.g., ‘#ff5500’)
 * decoration: (string) the text decoration to apply (‘none’ or ‘underline’ or ‘strike’)
 * alignment: (string) (‘left’ or ‘center’ or ‘right’) the alignment of the text
+* width: (number or string containing a number and ends with `%`) width of the text
+* height: (number or string containing a number and ends with `%`) height of the text
+* fillColor: (string) the background color of the text
+* margin: ([left, top, right, bottom], [horizontal, vertical], number equalLeftTopRightBottom) space arround the text
+* border: ([left, top, right, bottom], [horizontal, vertical], number equalLeftTopRightBottom) size of the border
 
 ### comment
 

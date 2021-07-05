@@ -29,6 +29,11 @@ doc.compile takes three arguments:
 
 doc.getPdf takes one optional argument:
 * options: an object describing document shape
+return a pdf document stream
+
+doc.getPcl takes one optional argument:
+* options: an object describing document shape
+return a pcl document stream
 
 options:
 * size: document format, default 'A4'

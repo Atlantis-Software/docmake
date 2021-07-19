@@ -341,3 +341,24 @@ Each tag include its contents in document once for each element in an array, in 
 {{/each}}
 ```
 
+inside a Each tag, some keywords could be used:
+
+* `$root` to access root scope.
+* `$item` to access current iteration item.
+* `$key` to access the current key in object iteration (same as $index in array).
+* `$index` to access the index of the iterated item.
+* `$first` only true on first iteration.
+* `$last` only true on last iteration.
+
+```javascript
+{{#each ["1","2","3"]}}
+  {{#if $first}}
+    {{text "first"}}
+  {{/if}}
+  {{text concat("item: ", $item, " index: ", $index)}}
+  {{#if $last==true}}
+    {{text "last"}}
+  {{/if}}
+{{/each}}
+```
+

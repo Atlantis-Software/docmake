@@ -235,6 +235,7 @@ available attributes for table:
 
 available attributes for table, row, header and columns:
 * colspan: (number) specifies the number of columns the cell should span
+* rowspan: (number) specifies the number of rows the cell should span
 * font: (string) name of the font
 * fontSize: (number) size of the font in pt
 * lineHeight: (number) the line height (default: 1)

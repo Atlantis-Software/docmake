@@ -85,6 +85,7 @@ available attributes for text:
 * color: (string) the color of the text (color name e.g., ‘blue’ or hexadecimal color e.g., ‘#ff5500’)
 * decoration: (string) the text decoration to apply (‘none’ or ‘underline’ or ‘strike’)
 * alignment: (string) (‘left’ or ‘center’ or ‘right’) the alignment of the text
+* valignment: (string) (‘top’ or ‘center’ or ‘bottom’) the vertical alignment of elements if height is defined.
 * width: (number or string containing a number and ends with `%`) width of the text
 * height: (number or string containing a number and ends with `%`) height of the text
 * fillColor: (string) the background color of the text
@@ -182,6 +183,7 @@ available attributes for columns:
 * color: (string) the color of the text (color name e.g., ‘blue’ or hexadecimal color e.g., ‘#ff5500’)
 * decoration: (string) the text decoration to apply (‘none’ or ‘underline’ or ‘strike’)
 * alignment: (string) (‘left’ or ‘center’ or ‘right’) the alignment of the columns
+* valignment: (string) (‘top’ or ‘center’ or ‘bottom’) the vertical alignment of elements in columns.
 * fillColor: (string) the background color of the columns
 * margin: ([left, top, right, bottom], [horizontal, vertical], number equalLeftTopRightBottom) space arround columns element
 * border: ([left, top, right, bottom], [horizontal, vertical], number equalLeftTopRightBottom) size of the border
@@ -244,7 +246,8 @@ available attributes for table, row, header and columns:
 * characterSpacing: (number) size of the letter spacing in pt
 * color: (string) the color of the text (color name e.g., ‘blue’ or hexadecimal color e.g., ‘#ff5500’)
 * decoration: (string) the text decoration to apply (‘none’ or ‘underline’ or ‘strike’)
-* alignment: (string) (‘left’ or ‘center’ or ‘right’) the alignment of the element
+* alignment: (string) (‘left’ or ‘center’ or ‘right’) the alignment of the elements in it.
+* valignment: (string) (‘top’ or ‘center’ or ‘bottom’) the vertical alignment of elements in it.
 * fillColor: (string) the background color of the element
 * margin: ([left, top, right, bottom], [horizontal, vertical], number equalLeftTopRightBottom) space arround element
 * border: ([left, top, right, bottom], [horizontal, vertical], number equalLeftTopRightBottom) size of the border

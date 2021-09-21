@@ -261,6 +261,17 @@ they only take one integer size parameter.
 {{vspace 50}}
 ```
 
+### style
+
+Style tag add some basic css style to document
+Style tag starts with `{{style`, a simple css string, and ends with `}}`.
+docmake css implement tag, class(.), id(#) selector
+
+```javascript
+{{style "text { color=#FF0000; }"}}
+{{text "all text are displayed in red"}}
+```
+
 ### class
 
 Class tag define a class that can be applyed to any element.

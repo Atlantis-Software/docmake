@@ -1,6 +1,7 @@
 var PdfKit = require('pdfkit');
 var PclKit = require('pclkit');
 var Compiler = require('./lib/compiler/compiler');
+var Element = require('./lib/render/element');
 var Processor = require('./lib/render/processor');
 var Document = require('./lib/render/document');
 var fonts = require('./fonts/fonts');
@@ -16,7 +17,12 @@ docmake.prototype.compile = function(template, scope, cb) {
     if (err) {
       return cb(err);
     }
-    self._compiled = nodes;
+    self._compiled = self._compiled || [];
+    if (self._compiled.length > 0) {
+      var closeDoc = new Element('closeDoc');
+      self._compiled.push(closeDoc);
+    }
+    self._compiled = self._compiled.concat(nodes);
     cb(null, nodes);
   });
 };

@@ -35,7 +35,12 @@ docmake.prototype.getPdf = function(options) {
   options.size = options.size || 'A4';
   options.margins = options.margins || { top: 10, left: 10, right: 10, bottom: 10 };
   options.fonts = options.fonts || fonts;
-  var doc = new PdfKit({size: options.size, margins: [0, 0, 0, 0]});
+  options.layout = options.layout || 'portrait';
+  var doc = new PdfKit({
+    size: options.size, 
+    margins: [0, 0, 0, 0],
+    layout: options.layout
+  });
   var document = new Document(options, doc);
   var rootContext = {
     parent: document,
